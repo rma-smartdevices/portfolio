@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto Unificado</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">Proyecto Unificado</a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="../index.html" data-nav="home">Inicio</a>
+          <a href="./afrodita.html" data-nav="afrodita">Afrodita</a>
+          <a href="./multimedia.html" data-nav="multimedia">Multimedia</a>
+          <a href="./mitologia.html" data-nav="mitologia">Mitología</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <header class="page-header">
+        <h1>Multimedia</h1>
+        <p class="lead">
+          Esta página usa tus audios y videos locales. Solo asegúrate de
+          ponerlos en
+          <code>assets/media/</code> y actualizar los nombres.
+        </p>
+      </header>
+
+      <section class="grid-2">
+        <article class="card">
+          <h2>Audio</h2>
+          <p class="muted">Ejemplo: <code>assets/media/audio1.mp3</code></p>
+
+          <audio controls preload="metadata">
+            <source src="../assets/media/audio1.mp3" type="audio/mpeg" />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+
+          <div class="hint">
+            Si tu audio tiene otro nombre (por ejemplo
+            <code>miAudio.mp3</code>), cambia la ruta.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Video</h2>
+          <p class="muted">Ejemplo: <code>assets/media/video1.mp4</code></p>
+
+          <video controls preload="metadata" width="100%">
+            <source src="../assets/media/video1.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+
+          <div class="hint">
+            Si el video es muy pesado, puede tardar en cargar (normal).
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Lista de archivos (para que no te pierdas)</h2>
+        <div class="card">
+          <ul class="list">
+            <li>
+              Pon audios aquí: <code>assets/media/</code> (ej:
+              <code>audio1.mp3</code>)
+            </li>
+            <li>
+              Pon videos aquí: <code>assets/media/</code> (ej:
+              <code>video1.mp4</code>)
+            </li>
+            <li>
+              Pon imágenes aquí: <code>assets/img/</code> (ej:
+              <code>afrodita.jpg</code>)
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Proyecto Unificado</p>
+      </div>
+    </footer>
+  </body>
+</html>

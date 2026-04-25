@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Afrodita | Proyecto Unificado</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">Proyecto Unificado</a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="../index.html" data-nav="home">Inicio</a>
+          <a href="./afrodita.html" data-nav="afrodita">Afrodita</a>
+          <a href="./multimedia.html" data-nav="multimedia">Multimedia</a>
+          <a href="./mitologia.html" data-nav="mitologia">Mitología</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <header class="page-header">
+        <h1>Afrodita</h1>
+        <p class="lead">
+          Diosa asociada al amor, la belleza y el deseo. Aquí puedes conservar
+          el contenido de tu proyecto original y mejorarlo con una estructura
+          semántica clara.
+        </p>
+      </header>
+
+      <section class="content-grid">
+        <article class="card">
+          <h2>Origen y simbolismo</h2>
+          <p>
+            Afrodita es una de las figuras más populares de la mitología griega.
+            Existen versiones distintas sobre su origen, y su simbología suele
+            relacionarse con la belleza, el encanto, la seducción y la
+            creatividad.
+          </p>
+          <ul class="list">
+            <li><strong>Símbolos:</strong> paloma, rosa, concha, mirto.</li>
+            <li><strong>Temas:</strong> amor, deseo, armonía, estética.</li>
+            <li>
+              <strong>Referencias:</strong> poesía, arte clásico, mitos
+              populares.
+            </li>
+          </ul>
+
+          <button class="btn small" data-toggle="#afrodita-extra">
+            Mostrar/ocultar resumen
+          </button>
+          <div id="afrodita-extra" class="collapsible" hidden>
+            <p>
+              Consejo: usa párrafos cortos y subtítulos. Eso hace que tu trabajo
+              se vea “de nivel profesional”, no como un bloque gigante de texto.
+            </p>
+          </div>
+        </article>
+
+        <aside class="card">
+          <h2>Imagen (opcional)</h2>
+          <p class="muted">
+            Coloca una imagen en: <code>assets/img/afrodita.jpg</code>
+          </p>
+
+          <img
+            src="../assets/img/afrodita.jpg"
+            alt="Afrodita (imagen opcional)"
+            onerror="this.style.display = 'none'"
+          />
+
+          <div class="divider"></div>
+
+          <h3>Enlaces</h3>
+          <p>
+            Antes tu proyecto enlazaba a “mitología” y faltaba el archivo. Ahora
+            ya existe:
+          </p>
+          <a class="btn" href="./mitologia.html">Ir a Mitología</a>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2>Sección editable</h2>
+        <p>
+          Aquí pega el contenido literal que tenías en tu archivo original (si
+          quieres), y yo te recomiendo que lo dividas en secciones:
+        </p>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Mitos famosos</h3>
+            <p>Ej: Paris y Helena, Adonis, Ares, etc.</p>
+          </article>
+
+          <article class="card">
+            <h3>Culto y representación</h3>
+            <p>Ej: templos, arte, influencia cultural, etc.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Proyecto Unificado</p>
+      </div>
+    </footer>
+  </body>
+</html>

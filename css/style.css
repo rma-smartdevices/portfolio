@@ -480,7 +480,7 @@ footer {
 
 @media (max-width: 768px) {
   .nav-links {
-    gap: 0.1rem;
+    gap: 0.4rem;
   }
   .nav-links a {
     display: inline-block;

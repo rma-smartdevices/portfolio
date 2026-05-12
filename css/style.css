@@ -1,0 +1,504 @@
+/* ===================================================================================== */
+/* ROOT VARIABLES                                                                       */
+/* ===================================================================================== */
+
+:root {
+  --bg-primary: #f5f7fa;
+
+  --bg-secondary: #c3d7ff;
+
+  --text-primary: #111827;
+
+  --text-secondary: #4b5563;
+
+  --accent: #2563eb;
+
+  --accent-hover: #1d4ed8;
+
+  --border: #e5e7eb;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --transition: all 0.3s ease;
+}
+
+/* ===================================================================================== */
+/* DARK MODE VARIABLES                                                                  */
+/* ===================================================================================== */
+
+body.dark-mode {
+  --bg-primary: #0f172a;
+
+  --bg-secondary: #111827;
+
+  --text-primary: #f9fafb;
+
+  --text-secondary: #cbd5e1;
+
+  --accent: #3b82f6;
+
+  --accent-hover: #60a5fa;
+
+  --border: #1f2937;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================================================================================== */
+/* GLOBAL RESET                                                                         */
+/* ===================================================================================== */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* ===================================================================================== */
+/* BODY STYLING                                                                         */
+/* ===================================================================================== */
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
+  line-height: 1.6;
+
+  scroll-behavior: smooth;
+
+  transition: var(--transition);
+}
+
+/* ===================================================================================== */
+/* REUSABLE CONTAINER                                                                   */
+/* ===================================================================================== */
+
+.container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* ===================================================================================== */
+/* NAVIGATION BAR                                                                       */
+/* ===================================================================================== */
+
+nav {
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--border);
+
+  transition: var(--transition);
+}
+
+body.dark-mode nav {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.nav-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1rem 0;
+}
+
+/* ===================================================================================== */
+/* LOGO                                                                                 */
+/* ===================================================================================== */
+
+.logo {
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+.logo a {
+  color: var(--text-primary);
+
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+/* ===================================================================================== */
+/* NAV LINKS                                                                            */
+/* ===================================================================================== */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: var(--text-primary);
+
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* ===================================================================================== */
+/* DARK MODE TOGGLE                                                                     */
+/* ===================================================================================== */
+
+.theme-toggle {
+  position: relative;
+
+  width: 60px;
+
+  height: 30px;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 50px;
+
+  background: var(--accent);
+
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 24px;
+
+  height: 24px;
+
+  left: 3px;
+
+  top: 3px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: var(--transition);
+}
+
+input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+/* ===================================================================================== */
+/* HERO SECTION                                                                         */
+/* ===================================================================================== */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-top: 100px;
+}
+
+.hero-content {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 4rem;
+
+  align-items: center;
+}
+
+/* ===================================================================================== */
+/* HERO TEXT                                                                            */
+/* ===================================================================================== */
+
+.hero-text h1 {
+  font-size: 4rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: var(--accent);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+
+  color: var(--text-secondary);
+
+  margin-bottom: 2rem;
+}
+
+/* ===================================================================================== */
+/* BUTTON STYLING                                                                       */
+/* ===================================================================================== */
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  background: var(--accent);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+
+  transform: translateY(-2px);
+}
+
+/* ===================================================================================== */
+/* RIGHT HERO COLUMN                                                                    */
+/* ===================================================================================== */
+
+.hero-right {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+/* ===================================================================================== */
+/* PROFILE IMAGE                                                                        */
+/* ===================================================================================== */
+
+#logo-img {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#logo-img img {
+  width: 180px;
+
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid var(--accent);
+
+  box-shadow: var(--shadow);
+
+  background: var(--bg-secondary);
+}
+
+/* ===================================================================================== */
+/* HERO CARD                                                                            */
+/* ===================================================================================== */
+
+.hero-card {
+  width: 100%;
+
+  background: var(--bg-secondary);
+
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+}
+
+/* ===================================================================================== */
+/* SECTION STYLING                                                                      */
+/* ===================================================================================== */
+
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.section-title span {
+  color: var(--accent);
+}
+
+/* ===================================================================================== */
+/* GRID SYSTEM                                                                          */
+/* ===================================================================================== */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
+}
+
+/* ===================================================================================== */
+/* CARD COMPONENT                                                                       */
+/* ===================================================================================== */
+
+.card {
+  background: var(--bg-secondary);
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+
+  color: var(--accent);
+
+  margin-bottom: 1rem;
+}
+
+/* ===================================================================================== */
+/* SOCIAL ICONS                                                                         */
+/* ===================================================================================== */
+
+.socials {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.socials a {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 12px;
+
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--border);
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+
+  transition: var(--transition);
+}
+
+.socials a:hover {
+  background: var(--accent);
+
+  color: white;
+}
+
+/* ===================================================================================== */
+/* FOOTER                                                                               */
+/* ===================================================================================== */
+
+footer {
+  padding: 2rem;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+}
+
+/* ===================================================================================== */
+/* MOBILE RESPONSIVE DESIGN                                                             */
+/* ===================================================================================== */
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    display: inline-block;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .logo {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  #logo-img img {
+    width: 130px;
+
+    height: 130px;
+  }
+}
